@@ -1,5 +1,5 @@
 const quizData = [
-    // --- ÖNCEKİ ÜNİTE: C# SOCKET & HTTP TEMELLERİ ---
+    // --- ÜNİTE 1: C# SOCKET & HTTP TEMELLERİ ---
     {
         question: "1. <code>new Socket(..., SocketType.Stream, ProtocolType.Tcp)</code> satırındaki <code>SocketType.Stream</code> neyi ifade eder?",
         a: "Verinin UDP protokolü ile gönderileceğini.",
@@ -105,7 +105,7 @@ const quizData = [
         correct: "b"
     },
     
-    // --- YENİ ÜNİTE: PYTHON CGI SUNUCUSU ---
+    // --- ÜNİTE 2: PYTHON CGI SUNUCUSU ---
     
     {
         question: "14. Python sunucusunda <code>CGIHTTPRequestHandler.cgi_directories = ['/cgi-bin']</code> satırı neden önemlidir?",
@@ -162,6 +162,89 @@ const quizData = [
         c: "Kütüphaneleri import eder.",
         d: "HTML çıktısını güzelleştirir.",
         correct: "b"
+    },
+
+    // --- ÜNİTE 3: PYTHON FLASK & WSGI ---
+
+    {
+        question: "21. Flask uygulamasını başlatan <code>app = Flask(__name__)</code> satırındaki <code>__name__</code> neyi belirtir?",
+        a: "Veritabanı adını.",
+        b: "Kullanıcı adını.",
+        c: "Mevcut modülün adını, Flask'ın kök dizini bulması için gereklidir.",
+        d: "Sunucunun IP adresini.",
+        correct: "c"
+    },
+    {
+        question: "22. <code>@app.route('/')</code> dekoratörü ne işe yarar?",
+        a: "Sunucuyu kapatır.",
+        b: "Belirtilen URL (/) ile hemen altındaki fonksiyonu eşleştirir (Routing).",
+        c: "HTML dosyasını siler.",
+        d: "Hata ayıklama modunu açar.",
+        correct: "b"
+    },
+    {
+        question: "23. Flask'ta <code>@app.route('/<name>')</code> tanımı ne anlama gelir?",
+        a: "name klasöründeki dosyaları listeler.",
+        b: "URL'in o kısmına gelen değeri 'name' adıyla fonksiyona parametre olarak geçirir (Dinamik URL).",
+        c: "Sadece 'name' ismindeki kullanıcılar girebilir.",
+        d: "Bu bir HTML etiketi hatasıdır.",
+        correct: "b"
+    },
+    {
+        question: "24. Bir formdan <b>POST</b> yöntemiyle gelen veriyi okumak için Flask'ta hangisi kullanılır?",
+        a: "request.args['key']",
+        b: "request.form['key']",
+        c: "request.url",
+        d: "request.get()",
+        correct: "b"
+    },
+    {
+        question: "25. URL üzerinden gelen parametreleri (Örn: <code>?a=5&b=3</code> - <b>GET</b> isteği) okumak için hangisi kullanılır?",
+        a: "request.form",
+        b: "request.data",
+        c: "request.args",
+        d: "request.cookies",
+        correct: "c"
+    },
+    {
+        question: "26. <code>redirect(url_for('success', name=user))</code> komutu ne yapar?",
+        a: "Kullanıcıyı 'success' fonksiyonunun bağlı olduğu URL'e yönlendirir.",
+        b: "Sayfayı yeniler.",
+        c: "success.html dosyasını indirir.",
+        d: "Veritabanına kayıt yapar.",
+        correct: "a"
+    },
+    {
+        question: "27. <code>app.send_static_file('index.html')</code> metodu ne işe yarar?",
+        a: "index.html dosyasını siler.",
+        b: "'static' klasöründeki index.html dosyasını istemciye gönderir.",
+        c: "HTML dosyasını Python koduna çevirir.",
+        d: "Dinamik bir şablon oluşturur.",
+        correct: "b"
+    },
+    {
+        question: "28. Flask'ta Türkçe karakter sorununu çözmek için <code>make_response</code> kullanılarak hangi başlık ayarlanmalıdır?",
+        a: "Content-Length: 0",
+        b: "Connection: close",
+        c: "Content-Type: text/plain; charset=utf-8",
+        d: "Server: Flask",
+        correct: "c"
+    },
+    {
+        question: "29. <code>app.run(host='0.0.0.0', debug=True)</code> satırındaki <code>debug=True</code> ne sağlar?",
+        a: "Sadece adminlerin girmesini sağlar.",
+        b: "Sunucuyu hızlandırır.",
+        c: "Kodda değişiklik yapıldığında sunucuyu otomatik yeniden başlatır ve hataları tarayıcıda gösterir.",
+        d: "Log kayıtlarını kapatır.",
+        correct: "c"
+    },
+    {
+        question: "30. Flask'ta <code>render_template('index.html', name='Ali')</code> fonksiyonunun temel amacı nedir?",
+        a: "Statik dosyayı olduğu gibi göndermek.",
+        b: "Veritabanı bağlantısı kurmak.",
+        c: "HTML şablonunun (Jinja2) içindeki değişkenleri ({{ name }}) doldurarak dinamik HTML üretmek.",
+        d: "Kullanıcıyı başka siteye yönlendirmek.",
+        correct: "c"
     }
 ];
 
