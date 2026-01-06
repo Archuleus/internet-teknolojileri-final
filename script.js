@@ -1,4 +1,5 @@
 const quizData = [
+    // --- ÖNCEKİ ÜNİTE: C# SOCKET & HTTP TEMELLERİ ---
     {
         question: "1. <code>new Socket(..., SocketType.Stream, ProtocolType.Tcp)</code> satırındaki <code>SocketType.Stream</code> neyi ifade eder?",
         a: "Verinin UDP protokolü ile gönderileceğini.",
@@ -102,6 +103,65 @@ const quizData = [
         c: "IP gizlemek için.",
         d: "UTF-8 yapmak için.",
         correct: "b"
+    },
+    
+    // --- YENİ ÜNİTE: PYTHON CGI SUNUCUSU ---
+    
+    {
+        question: "14. Python sunucusunda <code>CGIHTTPRequestHandler.cgi_directories = ['/cgi-bin']</code> satırı neden önemlidir?",
+        a: "Sunucunun sadece bu klasördeki dosyaları 'program' olarak çalıştırıp, diğerlerini normal dosya gibi sunması (Güvenlik) için.",
+        b: "HTML dosyalarının rengini değiştirmek için.",
+        c: "Sunucunun daha hızlı çalışması için.",
+        d: "Python'un yüklü olduğu yeri göstermek için.",
+        correct: "a"
+    },
+    {
+        question: "15. Python CGI scriptinde <code>form = cgi.FieldStorage()</code> komutu ne işe yarar?",
+        a: "Veritabanına bağlanır.",
+        b: "Sunucuyu kapatır.",
+        c: "Hem GET hem de POST yöntemiyle gelen form verilerini alıp ayrıştırır (parse eder).",
+        d: "Sadece resim dosyalarını okur.",
+        correct: "c"
+    },
+    {
+        question: "16. Bir CGI scripti çalıştırıldığında, Python kodunun çıktı olarak verdiği <b>İLK ŞEY</b> ne olmalıdır?",
+        a: "Hello World yazısı",
+        b: "Content-type: text/html başlığı ve ardından iki boş satır (\\n\\n)",
+        c: "&lt;html&gt; etiketi",
+        d: "Sunucu IP adresi",
+        correct: "b"
+    },
+    {
+        question: "17. <code>index.html</code> dosyasındaki Form 1 (GET) ile Form 2 (POST) arasındaki temel fark nedir?",
+        a: "GET verileri URL'de parametre olarak (?name=x) gönderir, POST verileri gövdede (body) gizli gönderir.",
+        b: "GET daha güvenlidir, POST daha hızlıdır.",
+        c: "GET ile dosya yüklenir, POST ile yüklenmez.",
+        d: "Hiçbir fark yoktur, ikisi de aynı çalışır.",
+        correct: "a"
+    },
+    {
+        question: "18. Python scriptindeki <code>if form.headers.__contains__('content-length'):</code> kontrolü genellikle hangi istek türü için anlamlıdır?",
+        a: "GET istekleri",
+        b: "POST istekleri (Gövdedeki veri boyutunu anlamak için)",
+        c: "DELETE istekleri",
+        d: "HEAD istekleri",
+        correct: "b"
+    },
+    {
+        question: "19. HTML dosyasındaki <code>&lt;meta http-equiv='refresh' content='5'&gt;</code> satırı ne yapar?",
+        a: "Sunucuyu her 5 saniyede bir yeniden başlatır.",
+        b: "Tarayıcının sayfayı her 5 saniyede bir otomatik yenilemesini (Client-side Refresh) sağlar.",
+        c: "Sayfanın 5 saniye sonra kapanmasını sağlar.",
+        d: "Python scriptini 5 kere çalıştırır.",
+        correct: "b"
+    },
+    {
+        question: "20. Python CGI scriptinin en başında yer alan <code>#!/usr/bin/env python</code> (Shebang) satırı ne işe yarar?",
+        a: "Kodun sadece Windows'ta çalışmasını sağlar.",
+        b: "İşletim sistemine bu dosyanın hangi yorumlayıcı (Python) ile çalıştırılacağını söyler.",
+        c: "Kütüphaneleri import eder.",
+        d: "HTML çıktısını güzelleştirir.",
+        correct: "b"
     }
 ];
 
@@ -111,6 +171,7 @@ const resultBox = document.getElementById('result');
 
 // Soruları Ekrana Basma Fonksiyonu
 function loadQuiz() {
+    quizContainer.innerHTML = ""; // Önceki içeriği temizle
     quizData.forEach((data, index) => {
         const card = document.createElement('div');
         card.classList.add('question-card');
