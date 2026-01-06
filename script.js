@@ -1,0 +1,180 @@
+const quizData = [
+    {
+        question: "1. <code>new Socket(..., SocketType.Stream, ProtocolType.Tcp)</code> satırındaki <code>SocketType.Stream</code> neyi ifade eder?",
+        a: "Verinin UDP protokolü ile gönderileceğini.",
+        b: "Verinin IPv6 adreslerini kullanacağını.",
+        c: "Verinin kesintisiz bir akış halinde, güvenilir ve sıralı (TCP) iletileceğini.",
+        d: "Verinin şifreli (HTTPS) olarak iletileceğini.",
+        correct: "c"
+    },
+    {
+        question: "2. Sunucu tarafında kullanılan <code>IPAddress.Any</code> (veya 0.0.0.0) adresi ne anlama gelir?",
+        a: "Sadece localhost üzerinden gelen bağlantıları kabul et.",
+        b: "Sunucunun çalıştığı bilgisayardaki tüm ağ arayüzlerini dinle.",
+        c: "Hiçbir bağlantıyı kabul etme.",
+        d: "Sadece dış ağdan gelenleri kabul et.",
+        correct: "b"
+    },
+    {
+        question: "3. <code>socketServer.Listen(100)</code> komutundaki 100 sayısı teknik olarak neyi ifade eder?",
+        a: "Maksimum kullanıcı sayısını.",
+        b: "Saniyede işlenebilecek veri miktarını (KB).",
+        c: "Accept edilene kadar kuyrukta (backlog) bekletilebilecek maksimum bağlantı isteği sayısını.",
+        d: "Sunucunun açık kalacağı süreyi.",
+        correct: "c"
+    },
+    {
+        question: "4. HTTP protokolünde, 'Header' ile 'Body' kısmını birbirinden ayıran ayırıcı (delimiter) nedir?",
+        a: "Tek bir boşluk karakteri",
+        b: "\\n (Tek satır sonu)",
+        c: "\\r\\n\\r\\n (Çift satır sonu / Boş bir satır)",
+        d: "&lt;html&gt; etiketi",
+        correct: "c"
+    },
+    {
+        question: "5. Dosyanın tarayıcıda açılmayıp direkt indirilmesi (Download) için hangi Header kullanılır?",
+        a: "Content-Disposition: inline",
+        b: "Content-Type: text/html",
+        c: "Content-Disposition: attachment",
+        d: "Connection: keep-alive",
+        correct: "c"
+    },
+    {
+        question: "6. HTTP yanıtının ilk satırı (Status Line) hangisi olmalıdır?",
+        a: "200 OK HTTP/1.1",
+        b: "HTTP/1.1 200 OK",
+        c: "GET / HTTP/1.1",
+        d: "Content-Type: text/html",
+        correct: "b"
+    },
+    {
+        question: "7. Bir resim dosyasını (.jpg) istemciye gönderirken C# tarafında veriyi nasıl okuyup göndermeliyiz?",
+        a: "File.ReadAllText ile string olarak okuyarak.",
+        b: "File.ReadAllLines ile satır satır okuyarak.",
+        c: "Resimler gönderilemez.",
+        d: "File.ReadAllBytes ile byte dizisi (binary) olarak okuyarak.",
+        correct: "d"
+    },
+    {
+        question: "8. <code>socketServer.Accept()</code> metodu çalıştığında programın davranışı nasıldır?",
+        a: "Arka planda çalışır, program durmaz.",
+        b: "Program o satırda bloklanır (donar) ve bir istemci bağlanana kadar bekler.",
+        c: "Hata fırlatır.",
+        d: "Otomatik olarak 100 istemci oluşturur.",
+        correct: "b"
+    },
+    {
+        question: "9. HTML içinde Backend saati (C#) ve Frontend saati (JS) varsa, kullanıcı ne görür?",
+        a: "İkisi de sunucu saatini gösterir.",
+        b: "Backend sunucu saatini, Frontend kullanıcının cihaz saatini gösterir.",
+        c: "İkisi de kullanıcının saatini gösterir.",
+        d: "Backend saati sürekli değişir.",
+        correct: "b"
+    },
+    {
+        question: "10. Sunucuyu 'Sürekli Hizmet Veren' hale getirmek için hangi yapı kullanılır?",
+        a: "socket.Close()",
+        b: "Console.ReadKey()",
+        c: "while(true) sonsuz döngüsü",
+        d: "IPAddress.Loopback",
+        correct: "c"
+    },
+    {
+        question: "11. Sunucunun kilitlenmemesi ve aynı anda çok kişiye bakabilmesi (Multithreading) için ne kullanılır?",
+        a: "Task.Run / Thread",
+        b: "Daha hızlı derleyici",
+        c: "Sıkıştırma algoritmaları",
+        d: "Bellek temizleme",
+        correct: "a"
+    },
+    {
+        question: "12. StreamWriter kullanırken <code>sw.Flush()</code> metodunu çağırmazsak ne olur?",
+        a: "Veriler anında gönderilir.",
+        b: "Veriler tampon bellekte kalır, gitmeyebilir.",
+        c: "Bağlantı kopar.",
+        d: "Veriler şifrelenir.",
+        correct: "b"
+    },
+    {
+        question: "13. Java istemci kodunda <code>User-Agent</code> neden değiştirilir?",
+        a: "Java'nın hızlanması için.",
+        b: "İsteğin gerçek bir tarayıcıdan (Chrome) geldiğini taklit etmek (Spoofing) için.",
+        c: "IP gizlemek için.",
+        d: "UTF-8 yapmak için.",
+        correct: "b"
+    }
+];
+
+const quizContainer = document.getElementById('quiz-container');
+const submitBtn = document.getElementById('submit-btn');
+const resultBox = document.getElementById('result');
+
+// Soruları Ekrana Basma Fonksiyonu
+function loadQuiz() {
+    quizData.forEach((data, index) => {
+        const card = document.createElement('div');
+        card.classList.add('question-card');
+
+        card.innerHTML = `
+            <div class="question-title">${data.question}</div>
+            <div class="options">
+                <label id="q${index}_a_label">
+                    <input type="radio" name="q${index}" value="a"> ${data.a}
+                </label>
+                <label id="q${index}_b_label">
+                    <input type="radio" name="q${index}" value="b"> ${data.b}
+                </label>
+                <label id="q${index}_c_label">
+                    <input type="radio" name="q${index}" value="c"> ${data.c}
+                </label>
+                <label id="q${index}_d_label">
+                    <input type="radio" name="q${index}" value="d"> ${data.d}
+                </label>
+            </div>
+        `;
+        quizContainer.appendChild(card);
+    });
+}
+
+// Sonuçları Kontrol Etme Fonksiyonu
+function submitQuiz() {
+    let score = 0;
+    
+    quizData.forEach((data, index) => {
+        const selectedOption = document.querySelector(`input[name="q${index}"]:checked`);
+        const labels = {
+            a: document.getElementById(`q${index}_a_label`),
+            b: document.getElementById(`q${index}_b_label`),
+            c: document.getElementById(`q${index}_c_label`),
+            d: document.getElementById(`q${index}_d_label`)
+        };
+
+        // Önceki stilleri temizle
+        for (let key in labels) {
+            labels[key].classList.remove('correct', 'incorrect');
+        }
+
+        if (selectedOption) {
+            if (selectedOption.value === data.correct) {
+                score++;
+                labels[selectedOption.value].classList.add('correct');
+            } else {
+                labels[selectedOption.value].classList.add('incorrect');
+                labels[data.correct].classList.add('correct'); // Doğruyu da göster
+            }
+        } else {
+            // Hiçbir şey seçilmediyse doğru cevabı göster
+             labels[data.correct].classList.add('correct');
+        }
+    });
+
+    // Sonucu göster
+    resultBox.classList.remove('hidden');
+    resultBox.innerHTML = `Sonuç: ${quizData.length} sorudan ${score} doğru yaptınız!`;
+    
+    // Sayfanın en altına kaydır
+    resultBox.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Sayfa yüklenince testi başlat
+loadQuiz();
