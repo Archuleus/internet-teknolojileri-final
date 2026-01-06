@@ -245,6 +245,65 @@ const quizData = [
         c: "HTML şablonunun (Jinja2) içindeki değişkenleri ({{ name }}) doldurarak dinamik HTML üretmek.",
         d: "Kullanıcıyı başka siteye yönlendirmek.",
         correct: "c"
+    },
+
+    // --- ÜNİTE 4: PHP AJAX & ASENKRON PROGRAMLAMA ---
+
+    {
+        question: "31. Klasik yöntemde bir AJAX isteği başlatmak için hangi nesne kullanılır?",
+        a: "new HTTPClient()",
+        b: "new XMLHttpRequest()",
+        c: "new Socket()",
+        d: "new ServerRequest()",
+        correct: "b"
+    },
+    {
+        question: "32. Bir AJAX isteğinin başarıyla tamamlandığını (HTTP 200 OK ve Bitti) anlamak için hangi kontrol yapılır?",
+        a: "xhr.status === 404",
+        b: "xhr.readyState === 1",
+        c: "xhr.status === 200 && xhr.readyState === 4 (DONE)",
+        d: "xhr.responseText === 'OK'",
+        correct: "c"
+    },
+    {
+        question: "33. Modern Javascript'te kullanılan <code>fetch('url')</code> fonksiyonu geriye ne döner?",
+        a: "Doğrudan HTML içeriği",
+        b: "Bir Promise (Söz)",
+        c: "XML dosyası",
+        d: "Hata mesajı",
+        correct: "b"
+    },
+    {
+        question: "34. <code>async function</code> içinde kullanılan <code>await</code> anahtar kelimesi ne işe yarar?",
+        a: "İşlemi iptal eder.",
+        b: "Asenkron bir işlemin (Promise) bitmesini bekler, kodun o satırda duraklamasını sağlar.",
+        c: "Sunucuyu yeniden başlatır.",
+        d: "Sayfayı yeniler.",
+        correct: "b"
+    },
+    {
+        question: "35. AJAX ile dosya yüklemek veya form verisi göndermek için hangi nesne en uygundur?",
+        a: "JSON.stringify()",
+        b: "new FormData()",
+        c: "new String()",
+        d: "document.getElementById()",
+        correct: "b"
+    },
+    {
+        question: "36. AJAX ile dosya yüklerken, yükleme yüzdesini (Progress Bar) takip etmek için hangi olay (event) kullanılır?",
+        a: "xhr.onload",
+        b: "xhr.onerror",
+        c: "xhr.upload.onprogress",
+        d: "window.onclick",
+        correct: "c"
+    },
+    {
+        question: "37. Bir AJAX isteği GET yöntemiyle yapılıyorsa, parametreler nereye eklenir?",
+        a: "Send fonksiyonunun içine: xhr.send(params)",
+        b: "HTTP Header'ına",
+        c: "URL'in sonuna: url?a=1&b=2",
+        d: "Hiçbir yere, GET ile parametre gönderilemez.",
+        correct: "c"
     }
 ];
 
