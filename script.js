@@ -106,7 +106,6 @@ const quizData = [
     },
     
     // --- ÜNİTE 2: PYTHON CGI SUNUCUSU ---
-    
     {
         question: "14. Python sunucusunda <code>CGIHTTPRequestHandler.cgi_directories = ['/cgi-bin']</code> satırı neden önemlidir?",
         a: "Sunucunun sadece bu klasördeki dosyaları 'program' olarak çalıştırıp, diğerlerini normal dosya gibi sunması (Güvenlik) için.",
@@ -165,7 +164,6 @@ const quizData = [
     },
 
     // --- ÜNİTE 3: PYTHON FLASK & WSGI ---
-
     {
         question: "21. Flask uygulamasını başlatan <code>app = Flask(__name__)</code> satırındaki <code>__name__</code> neyi belirtir?",
         a: "Veritabanı adını.",
@@ -248,7 +246,6 @@ const quizData = [
     },
 
     // --- ÜNİTE 4: PHP AJAX & ASENKRON PROGRAMLAMA ---
-
     {
         question: "31. Klasik yöntemde bir AJAX isteği başlatmak için hangi nesne kullanılır?",
         a: "new HTTPClient()",
@@ -307,7 +304,6 @@ const quizData = [
     },
 
     // --- ÜNİTE 5: C# BASIC HTTP SERVER (MANUEL) ---
-
     {
         question: "38. C# kodundaki <code>stream.Read(rBuf, 0, rBuf.Length)</code> metodu geriye ne döner?",
         a: "Okunan verinin kendisini (string)",
@@ -358,7 +354,6 @@ const quizData = [
     },
 
     // --- ÜNİTE 6: JAVASCRIPT & GENEL WEB TEKNOLOJİLERİ ---
-
     {
         question: "44. JavaScript hangi HTML etiketinin içine konulur?",
         a: "&lt;js&gt;",
@@ -678,9 +673,9 @@ const quizData = [
         c: "for (let v; ; v++) { }",
         d: "do { } for (v++ < 5",
         correct: "d"
-    }
-    // --- ÜNİTE 7: PHP TEMELLERİ & W3SCHOOLS DETAYLARI (TRICKY) ---
+    },
 
+    // --- ÜNİTE 7: PHP TEMELLERİ & W3SCHOOLS DETAYLARI (TRICKY) ---
     {
         question: "84. PHP'de değişken isimleri ile ilgili aşağıdakilerden hangisi <b>YANLIŞTIR</b>?",
         a: "Değişkenler $ işareti ile başlar.",
@@ -1157,4 +1152,3 @@ function submitQuiz() {
 
 // Sayfa yüklenince testi başlat
 loadQuiz();
-
