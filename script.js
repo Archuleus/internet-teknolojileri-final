@@ -304,6 +304,57 @@ const quizData = [
         c: "URL'in sonuna: url?a=1&b=2",
         d: "Hiçbir yere, GET ile parametre gönderilemez.",
         correct: "c"
+    },
+
+    // --- ÜNİTE 5: C# BASIC HTTP SERVER (MANUEL) ---
+
+    {
+        question: "38. C# kodundaki <code>stream.Read(rBuf, 0, rBuf.Length)</code> metodu geriye ne döner?",
+        a: "Okunan verinin kendisini (string)",
+        b: "Hata kodunu",
+        c: "Okunan bayt sayısını (int)",
+        d: "Dosya yolunu",
+        correct: "c"
+    },
+    {
+        question: "39. <code>HttpUtility.UrlDecode(readContent)</code> komutu neden kullanılır?",
+        a: "Şifreli veriyi çözmek için.",
+        b: "URL'deki %20 gibi kodlanmış karakterleri (boşluk vb.) normale çevirmek için.",
+        c: "HTML etiketlerini temizlemek için.",
+        d: "Veriyi veritabanına kaydetmek için.",
+        correct: "b"
+    },
+    {
+        question: "40. Bu kodda gelen isteğin GET mi yoksa POST mu olduğunu anlamak için neye bakılıyor?",
+        a: "Sadece URL uzunluğuna.",
+        b: "İçerikte 'Content-Length' başlığının olup olmamasına (Varsa body içerir).",
+        c: "Tarayıcı ismine.",
+        d: "Saat bilgisine.",
+        correct: "b"
+    },
+    {
+        question: "41. Manuel bir HTTP sunucusunda, Request (İstek) başlıkları ile Body (Gövde) arasındaki sınır nedir?",
+        a: "Content-Type satırı",
+        b: "Boş bir satır (\\r\\n\\r\\n)",
+        c: "&lt;body&gt; etiketi",
+        d: "GET kelimesi",
+        correct: "b"
+    },
+    {
+        question: "42. <code>new DataTable().Compute(expression, null)</code> satırı bu kodda ne amaçla kullanılmıştır?",
+        a: "Veritabanı bağlantısı kurmak için.",
+        b: "Tablo oluşturmak için.",
+        c: "String halindeki matematiksel ifadeyi (Örn: '5+10') hesaplamak için.",
+        d: "Tarih bilgisini almak için.",
+        correct: "c"
+    },
+    {
+        question: "43. Sunucunun yanıt gönderirken <code>Content-Type</code> ve <code>Connection: close</code> gibi başlıkları manuel olarak string içine yazmasının sebebi nedir?",
+        a: "Daha hızlı çalışması için.",
+        b: "HTTP protokolüne uygun, tarayıcının anlayabileceği geçerli bir yanıt oluşturmak için.",
+        c: "Kodun daha kısa olması için.",
+        d: "Güvenlik açığı oluşturmak için.",
+        correct: "b"
     }
 ];
 
