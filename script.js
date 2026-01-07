@@ -679,6 +679,408 @@ const quizData = [
         d: "do { } for (v++ < 5",
         correct: "d"
     }
+    // --- ÜNİTE 7: PHP TEMELLERİ & W3SCHOOLS DETAYLARI (TRICKY) ---
+
+    {
+        question: "84. PHP'de değişken isimleri ile ilgili aşağıdakilerden hangisi <b>YANLIŞTIR</b>?",
+        a: "Değişkenler $ işareti ile başlar.",
+        b: "Değişken isimleri bir rakamla başlayabilir. (Örn: $1var)",
+        c: "Değişken isimleri büyük/küçük harf duyarlıdır ($x ile $X farklıdır).",
+        d: "Değişken isimlerinde yalnızca alfanümerik karakterler ve alt çizgi (A-z, 0-9, _) kullanılabilir.",
+        correct: "b"
+    },
+    {
+        question: "85. PHP sözdiziminde (Syntax) aşağıdakilerden hangisi büyük/küçük harf duyarlı (Case-Sensitive) <b>DEĞİLDİR</b>?",
+        a: "Değişken isimleri ($color)",
+        b: "Sabitler (define ile tanımlananlar)",
+        c: "Dizi anahtarları (Array keys)",
+        d: "Anahtar kelimeler (if, else, while, echo) ve kullanıcı tanımlı fonksiyon isimleri",
+        correct: "d"
+    },
+    {
+        question: "86. Aşağıdaki kod bloğunun çıktısı ne olur?<br><code>$x = 5; function test() { echo $x; } test();</code>",
+        a: "5",
+        b: "0",
+        c: "Hata verir (Undefined variable $x) çünkü global değişkenlere fonksiyon içinden doğrudan erişilemez.",
+        d: "Null",
+        correct: "c"
+    },
+    {
+        question: "87. Bir fonksiyon içinde global bir değişkene erişmek ve onu değiştirmek için hangi anahtar kelime kullanılır?",
+        a: "static",
+        b: "public",
+        c: "global",
+        d: "extern",
+        correct: "c"
+    },
+    {
+        question: "88. <code>static</code> anahtar kelimesi ile tanımlanan bir yerel değişkenin özelliği nedir?",
+        a: "Sadece fonksiyon dışında kullanılabilir.",
+        b: "Fonksiyon her çağrıldığında değeri sıfırlanır.",
+        c: "Fonksiyon çalışmayı bitirse bile değişken silinmez, son değerini hafızada tutar.",
+        d: "Sabit (constant) gibi davranır, değeri değiştirilemez.",
+        correct: "c"
+    },
+    {
+        question: "89. <code>echo</code> ve <code>print</code> arasındaki teknik farklardan biri nedir?",
+        a: "echo daha yavaştır.",
+        b: "print birden fazla parametre alabilir.",
+        c: "echo geriye değer döndürmez (void), print işlemin sonucunda her zaman 1 döndürür.",
+        d: "print HTML etiketlerini yazdıramaz.",
+        correct: "c"
+    },
+    {
+        question: "90. PHP'de <code>var_dump($x)</code> fonksiyonu ne işe yarar?",
+        a: "Değişkeni siler.",
+        b: "Değişkenin değerini ve veri tipini (uzunluğuyla birlikte) ekrana basar.",
+        c: "Değişkeni veritabanına kaydeder.",
+        d: "Değişkenin ismini değiştirir.",
+        correct: "b"
+    },
+    {
+        question: "91. Aşağıdaki string tanımlamalarından hangisinde değişkenin değeri <b>YAZILMAZ</b> (yorumlanmaz), değişken ismi olduğu gibi ($x) ekrana çıkar?",
+        a: "echo \"Değer: $x\"; (Çift Tırnak)",
+        b: "echo 'Değer: $x'; (Tek Tırnak)",
+        c: "echo $x;",
+        d: "echo \"$x\";",
+        correct: "b"
+    },
+    {
+        question: "92. PHP'de bir stringin uzunluğunu bayt cinsinden döndüren fonksiyon hangisidir?",
+        a: "str_word_count()",
+        b: "strlen()",
+        c: "count()",
+        d: "strpos()",
+        correct: "b"
+    },
+    {
+        question: "93. <code>strpos('Merhaba', 'M')</code> fonksiyonu ne döndürür? (Dikkat: Tuzak Soru)",
+        a: "1",
+        b: "true",
+        c: "0",
+        d: "M",
+        correct: "c"
+    },
+    {
+        question: "94. PHP'de bir stringi büyük harfe çevirmek için hangi fonksiyon kullanılır?",
+        a: "strtolower()",
+        b: "ucwords()",
+        c: "strtoupper()",
+        d: "uppercase()",
+        correct: "c"
+    },
+    {
+        question: "95. <code>$x = 'Hello World'; $y = explode(' ', $x);</code> işleminden sonra $y değişkeninin tipi ne olur?",
+        a: "String",
+        b: "Integer",
+        c: "Array (Dizi)",
+        d: "Object",
+        correct: "c"
+    },
+    {
+        question: "96. İki string ifadeyi birleştirmek (Concatenation) için hangi operatör kullanılır?",
+        a: "+ (Artı)",
+        b: ". (Nokta)",
+        c: "& (Ve işareti)",
+        d: ", (Virgül)",
+        correct: "b"
+    },
+    {
+        question: "97. Aşağıdaki kodun çıktısı nedir?<br><code>$x = '5' + 10; echo $x;</code>",
+        a: "510",
+        b: "5+10",
+        c: "15 (PHP stringi otomatik sayıya çevirir)",
+        d: "Hata verir (Type Error)",
+        correct: "c"
+    },
+    {
+        question: "98. PHP'de 'String Slicing' (Kesme) işlemi için kullanılan, negatif indeks de kabul eden fonksiyon hangisidir?",
+        a: "slice()",
+        b: "str_split()",
+        c: "substr()",
+        d: "trim()",
+        correct: "c"
+    },
+    {
+        question: "99. PHP'de <code>PHP_INT_MAX</code> sabiti neyi ifade eder?",
+        a: "PHP sürüm numarasını.",
+        b: "O sistemde desteklenen en büyük tamsayı (integer) değerini.",
+        c: "Maksimum dosya yükleme boyutunu.",
+        d: "Maksimum değişken sayısını.",
+        correct: "b"
+    },
+    {
+        question: "100. <code>is_numeric()</code> fonksiyonu aşağıdaki hangi durumda <b>false</b> döner?",
+        a: "is_numeric(59.85)",
+        b: "is_numeric('59.85')",
+        c: "is_numeric('100')",
+        d: "is_numeric('100Hello')",
+        correct: "d"
+    },
+    {
+        question: "101. Ondalıklı bir sayıyı (Float) tamsayıya (Int) dönüştürdüğümüzde (Casting) aşağıdakilerden hangisi gerçekleşir? (Örn: (int)20.9)",
+        a: "Sayı en yakın tamsayıya yuvarlanır (21 olur).",
+        b: "Sayı yukarı yuvarlanır.",
+        c: "Ondalık kısım tamamen atılır (20 olur).",
+        d: "Hata verir.",
+        correct: "c"
+    },
+    {
+        question: "102. <code>pi()</code> fonksiyonu ne döndürür?",
+        a: "3.14",
+        b: "3.14159...",
+        c: "Dairenin alanını",
+        d: "Rastgele bir sayı",
+        correct: "b"
+    },
+    {
+        question: "103. 10 ile 100 arasında (sınırlar dahil) rastgele bir sayı üretmek için hangi fonksiyon kullanılır?",
+        a: "rnd(10, 100)",
+        b: "random(10, 100)",
+        c: "rand(10, 100)",
+        d: "Math.random(10, 100)",
+        correct: "c"
+    },
+    {
+        question: "104. <code>define('GREETING', 'Welcome');</code> ile oluşturulan sabitlere (Constant) nasıl erişilir?",
+        a: "$GREETING",
+        b: "GREETING",
+        c: "constant('GREETING')",
+        d: "define.GREETING",
+        correct: "b"
+    },
+    {
+        question: "105. <code>const</code> anahtar kelimesi ile <code>define()</code> arasındaki temel farklardan biri nedir?",
+        a: "const ile oluşturulanlar büyük/küçük harf duyarlı değildir.",
+        b: "const sadece fonksiyon içinde kullanılabilir.",
+        c: "const derleme zamanında (compile-time) tanımlanır, define ise çalışma zamanında (runtime) tanımlanır.",
+        d: "Hiçbir fark yoktur.",
+        correct: "c"
+    },
+    {
+        question: "106. Aşağıdaki 'Sihirli Sabitlerden' (Magic Constants) hangisi dosyanın tam yolunu verir?",
+        a: "__LINE__",
+        b: "__DIR__",
+        c: "__FILE__",
+        d: "__FUNCTION__",
+        correct: "c"
+    },
+    {
+        question: "107. <code>__LINE__</code> sihirli sabiti ne döndürür?",
+        a: "Dosyadaki toplam satır sayısını.",
+        b: "O anki kodun bulunduğu satır numarasını.",
+        c: "Bir alt satırı.",
+        d: "Çizgi karakterini.",
+        correct: "b"
+    },
+    {
+        question: "108. PHP'de <code>**</code> operatörü (Örn: <code>$x ** $y</code>) ne işlem yapar?",
+        a: "Çarpma",
+        b: "Üs alma (Exponentiation)",
+        c: "Mod alma",
+        d: "Karekök alma",
+        correct: "b"
+    },
+    {
+        question: "109. 'Eşitlik' (<code>==</code>) ve 'Özdeşlik' (<code>===</code>) operatörleri arasındaki fark nedir?",
+        a: "== hem değeri hem tipi kontrol eder.",
+        b: "=== sadece değeri kontrol eder.",
+        c: "== değerlerin eşitliğine bakar (tip dönüşümü yapar), === hem değerin hem de veri tipinin aynılığına bakar.",
+        d: "Bir fark yoktur.",
+        correct: "c"
+    },
+    {
+        question: "110. PHP 7 ile gelen 'Uzay Gemisi' (Spaceship) operatörü <code><=></code> ne döndürür?",
+        a: "Her zaman true veya false.",
+        b: "Sol taraf küçükse -1, eşitse 0, büyükse 1 değerini döndürür.",
+        c: "Uzay boşluğu karakteri döndürür.",
+        d: "İki değişkeni yer değiştirir.",
+        correct: "b"
+    },
+    {
+        question: "111. Aşağıdaki mantıksal operatörlerden hangisi 'VEYA' (OR) işlemi için kullanılmaz?",
+        a: "or",
+        b: "||",
+        c: "xor",
+        d: "Hiçbiri (hepsi kullanılır)",
+        correct: "c"
+    },
+    {
+        question: "112. <code>$x = 10; echo ++$x;</code> kodunun çıktısı nedir?",
+        a: "10 (Önce yazdırır sonra artırır)",
+        b: "11 (Önce artırır sonra yazdırır)",
+        c: "Hata verir",
+        d: "12",
+        correct: "b"
+    },
+    {
+        question: "113. <code>$x = 10; echo $x++;</code> kodunun çıktısı nedir?",
+        a: "10 (Önce değişkeni döndürür, sonra bellekte artırır)",
+        b: "11",
+        c: "Hata verir",
+        d: "9",
+        correct: "a"
+    },
+    {
+        question: "114. <code>and</code> operatörü ile <code>&&</code> operatörü arasındaki fark nedir?",
+        a: "İşlevleri farklıdır.",
+        b: "İşlevleri aynıdır ancak <code>&&</code> operatörünün önceliği (precedence) <code>and</code> operatöründen yüksektir.",
+        c: "<code>and</code> sadece if içinde kullanılır.",
+        d: "<code>&&</code> sadece while içinde kullanılır.",
+        correct: "b"
+    },
+    {
+        question: "115. PHP'de 'String Operators' olarak kullanılan atama operatörü hangisidir?",
+        a: "+=",
+        b: ".=",
+        c: "&=",
+        d: "*=",
+        correct: "b"
+    },
+    {
+        question: "116. Kısa if/else yapısı (Ternary Operator) hangisidir?",
+        a: "if ? true : false",
+        b: "(koşul) ? doğru : yanlış",
+        c: "(koşul) : doğru ? yanlış",
+        d: "koşul ?? doğru :: yanlış",
+        correct: "b"
+    },
+    {
+        question: "117. PHP 7 ile gelen 'Null Coalescing' operatörü <code>??</code> ne işe yarar?",
+        a: "Değişken null ise hata verir.",
+        b: "İlk işlenen (operand) mevcutsa ve null değilse onu döndürür, aksi halde ikinci işleneni döndürür.",
+        c: "İki değişkeni toplar.",
+        d: "Değişkenin tipini null yapar.",
+        correct: "b"
+    },
+    {
+        question: "118. <code>if...elseif...else</code> yapısında, <code>elseif</code> kelimesi bitişik mi yoksa ayrı mı (<code>else if</code>) yazılmalıdır?",
+        a: "Kesinlikle bitişik yazılmalıdır.",
+        b: "Kesinlikle ayrı yazılmalıdır.",
+        c: "PHP'de her ikisi de kabul edilir ve aynı sonucu verir (Sadece : kullanılan syntax'ta bitişik zorunludur).",
+        d: "Hata verir.",
+        correct: "c"
+    },
+    {
+        question: "119. <code>switch</code> yapısında, eşleşen bir <code>case</code> bulunduktan sonra diğer durumlara geçmesini engellemek için ne kullanılır?",
+        a: "stop",
+        b: "return",
+        c: "break",
+        d: "continue",
+        correct: "c"
+    },
+    {
+        question: "120. Bir <code>switch</code> bloğunda, hiçbir <code>case</code> ile eşleşme olmazsa çalışacak blok hangisidir?",
+        a: "else",
+        b: "error",
+        c: "default",
+        d: "finallly",
+        correct: "c"
+    },
+    {
+        question: "121. Kullanıcı tanımlı bir fonksiyona varsayılan parametre değeri (Default Argument Value) nasıl atanır?",
+        a: "function test($a = 50) { }",
+        b: "function test($a : 50) { }",
+        c: "function test(default $a) { }",
+        d: "function test($a) { default: 50 }",
+        correct: "a"
+    },
+    {
+        question: "122. Bir fonksiyona parametre gönderirken, değişkenin kopyası yerine kendisinin (adresinin) gönderilmesini sağlamak (Pass by Reference) için hangi işaret kullanılır?",
+        a: "*",
+        b: "%",
+        c: "&",
+        d: "$",
+        correct: "c"
+    },
+    {
+        question: "123. <code>function sum(int $a, int $b)</code> şeklinde tip belirterek (Type Hinting) fonksiyon tanımlamak ne sağlar?",
+        a: "Kodun daha yavaş çalışmasını.",
+        b: "Fonksiyona yanlış veri tipi gönderildiğinde PHP'nin hata vermesini veya otomatik çevirmeye çalışmasını sağlar.",
+        c: "Sadece tamsayı döndürmesini sağlar.",
+        d: "Değişken isimlerini gizler.",
+        correct: "b"
+    },
+    {
+        question: "124. PHP'de katı tür denetimini (Strict Types) etkinleştirmek için dosyanın en başına hangi kod yazılır?",
+        a: "use strict;",
+        b: "declare(strict_types=1);",
+        c: "ini_set('strict', 1);",
+        d: "require_strict();",
+        correct: "b"
+    },
+    {
+        question: "125. Bir fonksiyonun birden fazla değer döndürmesi (örneğin dizi olarak) mümkün müdür?",
+        a: "Hayır, sadece tek değer döner.",
+        b: "Evet, return [deger1, deger2]; şeklinde dizi döndürerek yapılabilir.",
+        c: "Evet, echo komutu ile.",
+        d: "Sadece nesne döndürebilir.",
+        correct: "b"
+    },
+    {
+        question: "126. Değişken sayıda argüman alan (Variadic) bir fonksiyon tanımlamak için hangi operatör kullanılır? (Örn: <code>function sum(...$num)</code>)",
+        a: "...",
+        b: "xxx",
+        c: "[]",
+        d: "args",
+        correct: "a"
+    },
+    {
+        question: "127. Aşağıdaki kodun çıktısı nedir? <br><code>$x = 5; $y = 10; function test() { $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y']; } test(); echo $y;</code>",
+        a: "10",
+        b: "5",
+        c: "15",
+        d: "Hata verir",
+        correct: "c"
+    },
+    {
+        question: "128. PHP'de <code>do...while</code> döngüsü ile <code>while</code> döngüsü arasındaki temel fark nedir?",
+        a: "Fark yoktur.",
+        b: "do...while döngüsü koşul yanlış olsa bile kod bloğunu en az bir kez çalıştırır.",
+        c: "while döngüsü daha hızlıdır.",
+        d: "do...while sadece sayılarla kullanılır.",
+        correct: "b"
+    },
+    {
+        question: "129. <code>foreach</code> döngüsü hangi veri tipi üzerinde çalışmak için tasarlanmıştır?",
+        a: "String",
+        b: "Integer",
+        c: "Array (Dizi) ve Nesneler",
+        d: "Boolean",
+        correct: "c"
+    },
+    {
+        question: "130. <code>break 2;</code> komutu ne işe yarar?",
+        a: "Döngüyü 2 saniye durdurur.",
+        b: "İç içe geçmiş döngülerde, 2 seviye birden (hem içteki hem dıştaki döngüyü) sonlandırır.",
+        c: "İkinci döngüye atlar.",
+        d: "Hata kodudur.",
+        correct: "b"
+    },
+    {
+        question: "131. <code>continue</code> komutu döngü içinde ne yapar?",
+        a: "Döngüyü tamamen bitirir.",
+        b: "Döngünün o anki iterasyonunu (turunu) sonlandırır ve bir sonraki tura geçer.",
+        c: "Döngüyü baştan başlatır.",
+        d: "Fonksiyondan çıkar.",
+        correct: "b"
+    },
+    {
+        question: "132. PHP'de bir dizinin eleman sayısını (uzunluğunu) almak için hangi fonksiyon kullanılır?",
+        a: "length()",
+        b: "size()",
+        c: "count()",
+        d: "dim()",
+        correct: "c"
+    },
+    {
+        question: "133. Aşağıdaki kodda $age değişkeninin değeri ne olur?<br><code>$age = array(\"Peter\"=>\"35\", \"Ben\"=>\"37\"); echo $age['Peter'];</code>",
+        a: "37",
+        b: "Peter",
+        c: "35",
+        d: "0",
+        correct: "c"
+    }
 ];
 
 const quizContainer = document.getElementById('quiz-container');
@@ -755,3 +1157,4 @@ function submitQuiz() {
 
 // Sayfa yüklenince testi başlat
 loadQuiz();
+
