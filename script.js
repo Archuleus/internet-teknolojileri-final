@@ -355,6 +355,329 @@ const quizData = [
         c: "Kodun daha kısa olması için.",
         d: "Güvenlik açığı oluşturmak için.",
         correct: "b"
+    },
+
+    // --- ÜNİTE 6: JAVASCRIPT & GENEL WEB TEKNOLOJİLERİ ---
+
+    {
+        question: "44. JavaScript hangi HTML etiketinin içine konulur?",
+        a: "&lt;js&gt;",
+        b: "&lt;JavaScript&gt;",
+        c: "&lt;script&gt;",
+        d: "&lt;scripting&gt;",
+        correct: "c"
+    },
+    {
+        question: "45. Aşağıdaki HTML öğesinin içeriğini değiştirmek için doğru JavaScript sözdizimi nedir? <code>&lt;p id='demo'&gt;Bu bir gösteridir.&lt;/p&gt;</code>",
+        a: "document.getElement('p').innerHTML = 'Hello World!';",
+        b: "#demo.innerHTML = 'Hello World!';",
+        c: "document.getElementByName('p').innerHTML = 'Hello World!';",
+        d: "document.getElementById('demo').innerHTML = 'Hello World!';",
+        correct: "d"
+    },
+    {
+        question: "46. 'file.js' adlı harici bir komut dosyasına başvurmak için doğru sözdizimi nedir?",
+        a: "&lt;script href='file.js'&gt;",
+        b: "&lt;script src='file.js'&gt;",
+        c: "&lt;script name='file.js'&gt;",
+        d: "&lt;script target='file.js'&gt;",
+        correct: "b"
+    },
+    {
+        question: "47. JavaScript'te nasıl fonksiyon (yöntem) oluşturursunuz?",
+        a: "function = myFunction(){ }",
+        b: "function:myFunction(){ }",
+        c: "function myFunction(){ }",
+        d: "int function myFunction(){ return;}",
+        correct: "c"
+    },
+    {
+        question: "48. Aşağıdakilerden hangisi JavaScript kodu açıklamasıdır?",
+        a: "(comment)",
+        b: "/* comment */",
+        c: "#comment",
+        d: "&lt;!-- comment --&gt;",
+        correct: "b"
+    },
+    {
+        question: "49. Bir değiştirilebilir JavaScript değişkeni tanımlanması ne biçimde olmalıdır (önerilir)?",
+        a: "int x;",
+        b: "var x;",
+        c: "let x;",
+        d: "const x;",
+        correct: "c"
+    },
+    {
+        question: "50. Aşağıdakilerden hangisi JavaScript kodu oluşturma yöntemlerinden değildir?",
+        a: "inline",
+        b: "internal",
+        c: "external",
+        d: "direct",
+        correct: "d"
+    },
+    {
+        question: "51. Aşağıdakilerden hangisi JavaScript kodlarında dialog kutusu açan fonksiyondur?",
+        a: "put",
+        b: "alert",
+        c: "msgBox",
+        d: "window",
+        correct: "b"
+    },
+    {
+        question: "52. Aşağıdakilerden hangisi JavaScript veri tipi olamaz?",
+        a: "String",
+        b: "Object",
+        c: "Char",
+        d: "Boolean",
+        correct: "c"
+    },
+    {
+        question: "53. Aşağıdakilerden hangisi JavaScript giriş dialog penceresidir?",
+        a: "alert(...)",
+        b: "confirm(...)",
+        c: "prompt(...)",
+        d: "console.info(...)",
+        correct: "c"
+    },
+    {
+        question: "54. Html JavaScript programlama dilinde tekrarlanır bir zamanlayıcı kuran fonksiyon aşağıdakilerden hangisidir?",
+        a: "addEventListener(millisecond, function)",
+        b: "clearTimeout()",
+        c: "setInterval(function, milliseconds)",
+        d: "setTimeout(function, milliseconds)",
+        correct: "c"
+    },
+    {
+        question: "55. Bir tarayıcı içinde bir element odağı kaybettiğinde hangi olay meydana gelir?",
+        a: "onmouseout",
+        b: "onblur",
+        c: "onmouseleave",
+        d: "onchange",
+        correct: "b"
+    },
+    {
+        question: "56. Bir tarayıcı sayfasında herhangi bir konumda açılır pencere menüsünü yönetmek için hangi olay kullanılır?",
+        a: "oncontextmenu",
+        b: "onclick",
+        c: "onmousedown",
+        d: "onblur",
+        correct: "a"
+    },
+    {
+        question: "57. Html JavaScript programlama dilinde aşağıdakilerden hangisi bir nesne tanımlamasıdır?",
+        a: "{'N1':'V1', N2:2}",
+        b: "{N1:'V1', N2:2}",
+        c: "[{N1:'V1', N2:2}]",
+        d: "{N1='V1', N=2}",
+        correct: "b"
+    },
+    {
+        question: "58. Html JavaScript programlama dilinde tanımlayıcısı msg olan bir div elementinin click olayına func adlı fonksiyon aşağıdakilerden hangisinde doğru atanmıştır?",
+        a: "&lt;div id='msg' onclick='func()'&gt; &lt;/div&gt;",
+        b: "&lt;div id='msg' onclick='func'&gt; &lt;/div&gt;",
+        c: "document.getElementById('msg').onclick=func();",
+        d: "document.getElementById('msg').addEventListener('click', func());",
+        correct: "a"
+    },
+    {
+        question: "59. Html JavaScript programlama dilinde sayfa içindeki aynı türde html elementleri bir dizi halinde döndüren fonksiyon aşağıdakilerden hangisidir?",
+        a: "getElementsByClassName",
+        b: "getElementsByTagName",
+        c: "getElementsByName",
+        d: "getElementById",
+        correct: "b"
+    },
+    {
+        question: "60. Aşağıdakilerden hangisi inline script örneğidir?",
+        a: "&lt;head&gt; &lt;script&gt;console.info('Hee'); &lt;/script&gt; &lt;/head&gt;",
+        b: "&lt;head&gt; &lt;script src='s1.js'&gt; &lt;/script&gt; &lt;/head&gt;",
+        c: "&lt;body onload=\"alert('Hee');\"&gt; &lt;/body&gt;",
+        d: "&lt;body&gt; &lt;script&gt;console.info('Hee'); &lt;/script&gt; &lt;/body&gt;",
+        correct: "c"
+    },
+    {
+        question: "61. Aşağıdakilerden hangisi external script örneğidir?",
+        a: "&lt;head&gt; &lt;script&gt;console.info('Hee'); &lt;/script&gt; &lt;/head&gt;",
+        b: "&lt;head&gt; &lt;script src='s1.js'&gt; &lt;/script&gt; &lt;/head&gt;",
+        c: "&lt;body onload=\"alert('Hee');\"&gt; &lt;/body&gt;",
+        d: "&lt;body&gt; &lt;script&gt;console.info('Hee'); &lt;/script&gt; &lt;/body&gt;",
+        correct: "b"
+    },
+    {
+        question: "62. Aşağıdakilerden hangisi kod ile script oluşturmada kullanılmaz?",
+        a: "document.head.appendChild(scriptobject)",
+        b: "scriptobject.text=\"alert('Hee')\"",
+        c: "document.getElementById(scriptobject)",
+        d: "document.createElement(...)",
+        correct: "c"
+    },
+    {
+        question: "63. Aşağıdakilerden hangisi external script örneğidir? (Soru kökü muhtemelen JS komutunu soruyor)",
+        a: "console.debug(...)",
+        b: "typeof(…)",
+        c: "confirm(...)",
+        d: "eval(...)",
+        correct: "d"
+    },
+    {
+        question: "64. Aşağıdakilerden hangisi python basit http server modulünü çalıştırmak için kullanılan komut satırıdır?",
+        a: "python.exe -m httpServer 80",
+        b: "python.exe -m server 80",
+        c: "python.exe -m http.server 80",
+        d: "python.exe -m http 80",
+        correct: "c"
+    },
+    {
+        question: "65. Aşağıdaki JavaScript kodlarından hangisinin yanıtı hatalıdır? (Beklenen çıktı ile kod)",
+        a: "let a = 0.2 + 0.1; let b = a == 0.3; //sonuç: b=true (Hata: Floating point hassasiyetinden dolayı false çıkar)",
+        b: "let a = '100'; let b = '10'; let c = a / b; //sonuç: c=10",
+        c: "let a = '10'; let b = 20; let c = a + b; //sonuç: c=1020",
+        d: "let a = NaN; let b = '5'; let c = a + b; //sonuç: c=NaN5",
+        correct: "a"
+    },
+    {
+        question: "66. Aşağıdakilerden hangisi JavaScript dilinde bir değişkenin veri tipini döndürür?",
+        a: "type",
+        b: "typeof",
+        c: "classof",
+        d: "valueof",
+        correct: "b"
+    },
+    {
+        question: "67. Aşağıdakilerden hangisi JavaScript dilinde Number tipinde bir değer değildir?",
+        a: "NaN",
+        b: "Infinity",
+        c: "\"16\".toString(2)",
+        d: "Number(\"2\")",
+        correct: "c"
+    },
+    {
+        question: "68. Aşağıdakilerden hangisi JavaScript dilinde çeşitli geometrik şekiller çizdirilmesi için kullanılan tag dır?",
+        a: "Canvas",
+        b: "Ploty",
+        c: "Chart",
+        d: "D3",
+        correct: "a"
+    },
+    {
+        question: "69. Aşağıdakilerden hangisi JavaScript dilinde Window nesnesinin bir özelliği değildir?",
+        a: "screen",
+        b: "location",
+        c: "history",
+        d: "cookie",
+        correct: "d"
+    },
+    {
+        question: "70. Aşağıdakilerden hangisi JavaScript dilinde sayfayı yönlendirmede (redirect) kullanılan özelliktir?",
+        a: "location.href",
+        b: "location.hostname",
+        c: "location.pathname",
+        d: "location.assign",
+        correct: "a"
+    },
+    {
+        question: "71. Aşağıdakilerden hangisi JavaScript dilinde BigInt türü standart olarak kaç bit kullanır?",
+        a: "64",
+        b: "63",
+        c: "53",
+        d: "32",
+        correct: "c"
+    },
+    {
+        question: "72. Aşağıdakilerden hangisi JavaScript dilinde: <code>let a; alert(a);</code> alert metin olarak ne gösterir?",
+        a: "NaN",
+        b: "Undefined",
+        c: "Null",
+        d: "Object",
+        correct: "b"
+    },
+    {
+        question: "73. Aşağıdakilerden hangisi JavaScript dilinde x adlı değişken BigInt türünde değildir?",
+        a: "let x = BigInt('9');",
+        b: "let x = 5; x = 5n;",
+        c: "let x = 5n;",
+        d: "let x= Number(9007199254740995);",
+        correct: "d"
+    },
+    {
+        question: "74. Html JavaScript programlama dilinde hangi kod istisna (exception) meydana getirmez?",
+        a: "const x = [1,2]; x = 5;",
+        b: "let x = 5n /2;",
+        c: "const x = []; x = [];",
+        d: "let x = [1,2]; x = '5';",
+        correct: "d"
+    },
+    {
+        question: "75. Html JavaScript programlama dilinde coğrafi konum bilgilerine hangi özellikten erişilir?",
+        a: "window.location",
+        b: "navigator.geolocation",
+        c: "MediaDevices.arguments",
+        d: "window.localStorage",
+        correct: "b"
+    },
+    {
+        question: "76. Regular Expression (düzenli ifadeler) hangi kod/metin editörü içinde kullanılamaz?",
+        a: "Notepad",
+        b: "Ms Word",
+        c: "Ms Visual Studio",
+        d: "VS Code",
+        correct: "a"
+    },
+    {
+        question: "77. Hangisi 'Frontend' teknoljisi değildir?",
+        a: "jQuery",
+        b: "Bootstrap",
+        c: "PHP",
+        d: "JavaScript",
+        correct: "c"
+    },
+    {
+        question: "78. Hangisi 'Backend' teknoljisi değildir?",
+        a: "ASP.Net",
+        b: "JSP",
+        c: "Flask",
+        d: "RWD",
+        correct: "d"
+    },
+    {
+        question: "79. Hangisi 'Frontend' teknoljisi değildir?",
+        a: "React",
+        b: "Razor",
+        c: "Vue",
+        d: "Angular",
+        correct: "b"
+    },
+    {
+        question: "80. JavaScript'in tip güvenli üst kümesi olan programlama dili hangisidir?",
+        a: "TypeScript",
+        b: "JavaScript",
+        c: "C#",
+        d: "Java",
+        correct: "a"
+    },
+    {
+        question: "81. Hangi İlişkisel veri tabanı lisansız ticari kullanıma izin verir?",
+        a: "Oracle",
+        b: "Ms SQL",
+        c: "PostgreSQL",
+        d: "MySQL",
+        correct: "c"
+    },
+    {
+        question: "82. Web tarayıcısı JavaScript kodlarını hangi yöntem aracılığıyla yükleyemez?",
+        a: "HTML içinden",
+        b: "Consol penceresinden",
+        c: "Watch penceresinden",
+        d: "CSS dosyasından",
+        correct: "d"
+    },
+    {
+        question: "83. Aşağıdaki javascript döngülerinden hangisi hatalıdır?",
+        a: "for (let v of [1,2]) { }",
+        b: "for (let v in {a:1,b:2}) { }",
+        c: "for (let v; ; v++) { }",
+        d: "do { } for (v++ < 5",
+        correct: "d"
     }
 ];
 
